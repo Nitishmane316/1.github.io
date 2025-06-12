@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitish Mane | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: #121212;
+      color: #fff;
+    }
+
+    .dark-toggle {
+  position: fixed;
+  top: 7px;
+  right: 1px;
+  z-index: 1050;
+  font-size: 26px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+    header.hero {
+      background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover;
+      height: 100vh;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: inherit;
+    }
+
+    header.hero h1,
+    header.hero p {
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    nav {
+      background-color: #343a40;
+    }
+
+    nav a {
+      color: white !important;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: black;
+    }
+
+    body.dark-mode .social-icons a {
+      color: white;
+    }
+
+    .about img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .btn-resume {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 25px;
+      border: none;
+      background: #0563bb;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .btn-resume:hover {
+      background: #004a94;
+    }
+
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-form {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    body.dark-mode .contact-form {
+      background: #1e1e1e;
+      color: white;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #0563bb;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #0563bb;
+    }
+
+    .social-links a:hover {
+      color: #004a94;
+    }
+
+    footer {
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode footer {
+      background: #1a1a1a;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkToggle" class="dark-toggle">☀️</button>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Nitish Mane</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonial</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <h1>Transform your ideas into reality</h1>
+    <p>Hi, I'm Nitish — a web developer who turns ideas into fast, modern websites that work everywhere. <br> Let's build something great together.</p>
+
+    <div class="social-icons">
+      <a href="https://github.com/Nitishmane316"><i class="fab fa-github fa-lg"></i></a>
+      <a href="https://in.linkedin.com/in/nitish-mane-23798a369?trk=people-guest_people_search-card"><i class="fab fa-linkedin fa-lg"></i></a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="about container py-5" id="about">
+    <div class="row align-items-center">
+      <div class="col-lg-4 text-center">
+        <img src="./images/nitish.photo.jpg" alt="My Photo">
+      </div>
+      <div class="col-lg-8">
+        <h3>About Me</h3>
+        <p>Hello! I'm a passionate developer with experience in web development.</p>
+        <p>I specialize in building responsive, user-friendly websites for startups, freelancers, and small businesses.</p>
+        <p>Whether you need a sleek portfolio, a product landing page, or a blog platform, I can help you bring it to life.</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li><strong>Name:</strong> Nitish Mane</li>
+              <li><strong>Email:</strong> nitishmane.work@gmail.com </li>
+              <li><strong>Freelance:</strong> Available</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li><strong>Location:</strong> Mumbai, India</li>
+              <li><strong>Role:</strong> Web Developer</li>
+            </ul>
+          </div>
+        </div>
+        <!--<a href="assets/resume.pdf" class="btn-resume" download>Download Resume</a> -->
+
+      </div>
+    </div>
+  </section>
+<!-- Skills Section -->
+<section class="container py-5" id="skills">
+  <h2 class="text-center mb-4" data-aos="fade-up">Skills</h2>
+  <div class="row text-center">
+
+    <!-- HTML -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <i class="fab fa-html5 fa-3x text-danger mb-2"></i>
+      <h6>HTML5</h6>
+    </div>
+
+    <!-- CSS -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+      <i class="fab fa-css3-alt fa-3x text-primary mb-2"></i>
+      <h6>CSS3</h6>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+      <i class="fab fa-js-square fa-3x text-warning mb-2"></i>
+      <h6>JavaScript</h6>
+    </div>
+
+    <!-- PHP -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+      <i class="fas fa-code fa-3x text-secondary mb-2"></i>
+      <h6>PHP</h6>
+    </div>
+
+    <!-- React -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+      <i class="fab fa-react fa-3x text-info mb-2"></i>
+      <h6>React</h6>
+    </div>
+
+    <!-- Tailwind CSS -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+      <i class="fas fa-wind fa-3x text-info mb-2"></i>
+      <h6>Tailwind CSS</h6>
+    </div>
+
+    <!-- Bootstrap -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+      <i class="fab fa-bootstrap fa-3x text-purple mb-2"></i>
+      <h6>Bootstrap 5</h6>
+    </div>
+
+    <!-- Node.js -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="700">
+      <i class="fab fa-node-js fa-3x text-success mb-2"></i>
+      <h6>Node.js</h6>
+    </div>
+
+    <!-- API Integration -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="800">
+      <i class="fas fa-plug fa-3x text-dark mb-2"></i>
+      <h6>API Integration</h6>
+    </div>
+
+    <!-- Web Design -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="900">
+      <i class="fas fa-pencil-ruler fa-3x text-pink mb-2"></i>
+      <h6>Web Design</h6>
+    </div>
+
+    <!-- SEO -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="1000">
+      <i class="fas fa-search fa-3x text-success mb-2"></i>
+      <h6>SEO Optimization</h6>
+    </div>
+
+    <!-- Copywriting -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="1100">
+      <i class="fas fa-pen-nib fa-3x text-muted mb-2"></i>
+      <h6>Copywriting</h6>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section class="container py-5" id="projects">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card project-card">
+          <img src="https://source.unsplash.com/600x400/?web,portfolio" class="card-img-top" alt="Portfolio Website">
+          <div class="card-body">
+            <h5 class="card-title">Portfolio Website</h5>
+            <p class="card-text">A personal portfolio website showcasing my skills and projects, built with HTML, CSS, and JavaScript.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card project-card">
+          <img src="https://source.unsplash.com/600x400/?productivity,app" class="card-img-top" alt="To-Do App">
+          <div class="card-body">
+            <h5 class="card-title">To-Do List App</h5>
+            <p class="card-text">A simple to-do app using localStorage to manage tasks. Built with JavaScript and responsive design.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card project-card">
+          <img src="https://source.unsplash.com/600x400/?blog,writing" class="card-img-top" alt="Blog Platform">
+          <div class="card-body">
+            <h5 class="card-title">Blog Platform</h5>
+            <p class="card-text">A blog platform where users can read and write articles. Features user login and markdown support.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Testimonial Carousel Section -->
+<section class="container py-5" id="testimonials">
+  <h2 class="text-center mb-4">Testimonials</h2>
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card shadow-sm text-center mx-auto" style="max-width: 600px;">
+          <div class="card-body">
+            <p class="card-text">"Nitish did an amazing job with our website. His communication and dedication were top-notch!"</p>
+            <h5 class="card-title mt-3">— Alex Johnson</h5>
+            <p class="card-subtitle text-muted">Startup Founder</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card shadow-sm text-center mx-auto" style="max-width: 600px;">
+          <div class="card-body">
+            <p class="card-text">"Highly recommended! Delivered the project on time and exceeded expectations."</p>
+            <h5 class="card-title mt-3">— Priya Verma</h5>
+            <p class="card-subtitle text-muted">Freelancer Client</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card shadow-sm text-center mx-auto" style="max-width: 600px;">
+          <div class="card-body">
+            <p class="card-text">"The UI was clean and mobile-friendly. We got great feedback from users."</p>
+            <h5 class="card-title mt-3">— Jordan Smith</h5>
+            <p class="card-subtitle text-muted">Marketing Lead</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card shadow-sm text-center mx-auto" style="max-width: 600px;">
+          <div class="card-body">
+            <p class="card-text">"Nitish was responsive and really understood our vision from the start."</p>
+            <h5 class="card-title mt-3">— Sarah Lee</h5>
+            <p class="card-subtitle text-muted">Creative Director</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card shadow-sm text-center mx-auto" style="max-width: 600px;">
+          <div class="card-body">
+            <p class="card-text">"We loved working with Nitish. He’s talented and professional."</p>
+            <h5 class="card-title mt-3">— Rahul Desai</h5>
+            <p class="card-subtitle text-muted">CTO, SmallBizTech</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section class="container py-5" id="contact">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="text-center mt-4 social-links">
+          <a href="https://github.com/Nitishmane316"><i class="fab fa-github fa-lg"></i></a>
+          <a href="https://in.linkedin.com/in/nitish-mane-23798a369?trk=people-guest_people_search-card"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-white">
+    <p>&copy; 2025 Nitish Mane. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const toggle = document.getElementById('darkToggle');
+    const body = document.body;
+
+    function updateToggleIcon() {
+      toggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    }
+
+    updateToggleIcon();
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      updateToggleIcon();
+    });
+  </script>
+</body>
+</html>
